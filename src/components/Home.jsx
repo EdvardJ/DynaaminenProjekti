@@ -1,16 +1,12 @@
 import React from "react";
+import Slideshow from "./Slideshow";
 
 function Home() {
   return (
     //Wrapper
-
-
-    
 <div className="home" class="text-center">
-
-  
-
   <div className="introduction">
+    <Slideshow />
     <h1>Introduction:</h1>
     <p>We are 3 full-stack web developer students from Taitotalo, Helsinki. The goal of this dynamic group project is to learn how to develop a web service as a group and learn about its technologies.</p>
     <p>Check out our dev blog here: 
@@ -18,7 +14,7 @@ function Home() {
     </p>
     <h2>Technologies</h2>
     <ul>
-    <li>HTML 5</li>S
+    <li>HTML 5</li>
     <li>CSS 3</li>
     <li>Javascript</li>
     <li>React</li>
