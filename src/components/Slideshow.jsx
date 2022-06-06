@@ -35,28 +35,22 @@ const CollectionSize = MyCollection.length;
   };
  
   return (
-    <div >
+    <div class="d-flex justify-content-center">
+      <div >
       <h2>Welcome to PlantPlanner!</h2>
-      <div>
         <Paper
           square
-          elevation={0}
           style={{
             height: 25,
             display: "flex center",
-            paddingLeft: theme.spacing(4),
             backgroundColor: theme.palette.background.default,
-            alignItems: "center",
           }}
         >
           <Typography>{MyCollection[index].label}</Typography>
         </Paper>
-        <img
-          src={MyCollection[index].imgPath}
-          alt={MyCollection[index].label}
-        />
         <MobileStepper
-          variant="text"
+      style={{justifyContent: 'center'}}
+          variant="number"
           position="static"
           index={index}
           steps={CollectionSize}
@@ -74,6 +68,10 @@ const CollectionSize = MyCollection.length;
               )}
             </Button>
           }
+        />
+        <img
+          src={MyCollection[index].imgPath}
+          alt={MyCollection[index].label}
         />
       </div>
     </div>
