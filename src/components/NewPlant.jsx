@@ -13,7 +13,7 @@ function NewPlant() {
                   <h1>New Plant</h1>
                 </div>
 
-                <div class="row">
+                <div class="d-flex row justify-content-space-between">
                   <div class="col">
                     <label for="Plantname">Plant name:</label>
                     <input type="text" id="Plantname" name="Plantname" placeholder="Your plant's name..."></input>
@@ -27,7 +27,7 @@ function NewPlant() {
                 </div>
 
                 <div class="row" >
-                  <div class="row-10 ">  
+                  <div class="row-10">  
                     <label for="Watering cycle">Watering cycle:</label>
                   
                     <select select id="country" name="country">
@@ -38,15 +38,17 @@ function NewPlant() {
                   </div>
                 </div>
 
+                <div class="mb-3">
+                  <label for="plant-watered">Plant has been watered</label>
+                  <input type="checkbox" id="plant-watered"/>
+                </div>
+
                 <div class="row">
                   <p>Plant watered: <span id="js-initiation-time"></span></p>
-                  <div class="col">
-                    <button class="col" type="button" onClick={getInitationTime}>Water</button>
-                  </div>
                 </div>
       
                 <div class="row justify-content-center">
-                <input type="submit" value="Submit"></input>
+                <input type="submit" value="Submit" onClick={getInitationTime}></input>
                 </div>
               </form>
             </div>
