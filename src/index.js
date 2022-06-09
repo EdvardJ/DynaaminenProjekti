@@ -17,6 +17,8 @@ import {
 
 import Admin from './components/admin/admin.jsx';
 
+import { authRole } from "./components/admin/adminroute";
+import ROLE from './components/admin/helpers/roles'
 
 const user = localStorage.getItem("token");
 
@@ -33,8 +35,8 @@ ReactDOM.render(
       <Route path="/Plants" element={<Plants />}/>
         <Route path="" element={<Posts />} />
         <Route path=":postSlug" element={<Post />} />
-        <Route path="/admin" element={<Admin />}>
-      </Route>
+      {user && authRole(ROLE.Admin) && <Route path="/admin" element={<Admin />} />}
+      <Route path="/admin" element={<Navigate replace to="/" />} />
     </Routes>
     <Footer />
   </Router>,
