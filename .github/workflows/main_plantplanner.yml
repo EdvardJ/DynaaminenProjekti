@@ -24,9 +24,8 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-          cd backend
-          npm install
           npm run build --if-present
+          npm run test --if-present
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -53,5 +52,5 @@ jobs:
         with:
           app-name: 'plantplanner'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A6424BC86D764E71B51AE888E8827647 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1F3BD5BE4E04419B99B68C6248649CC0 }}
           package: .
