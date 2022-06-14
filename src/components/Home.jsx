@@ -7,6 +7,7 @@ function Home() {
 <div className="home" class="text-center">
   <div className="introduction">
     <Slideshow />
+    <Slideshow />
     <h1>Introduction:</h1>
     <p>We are 3 full-stack web developer students from Taitotalo, Helsinki. The goal of this dynamic group project is to learn how to develop a web service as a group and learn about its technologies.</p>
     <p>Check out our dev blog here: 
